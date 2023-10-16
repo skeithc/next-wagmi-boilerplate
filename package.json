@@ -38,6 +38,8 @@
   "dependencies": {
     "@rainbow-me/rainbowkit": "^1.1.2",
     "@wagmi/core": "^1.4.3",
+    "ahooks": "^3.7.8",
+    "classnames": "^2.3.2",
     "lodash": "^4.17.21",
     "next": "^13.5.5",
     "react": "^18.2.0",
