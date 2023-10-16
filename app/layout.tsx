@@ -1,6 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Web3ContextProvider from '../contexts/Web3Context';
+import ThemeContextProvider from '../contexts/ThemeContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,7 +14,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+          <ThemeContextProvider>
+            <Web3ContextProvider>
+                {children}
+            </Web3ContextProvider>
+          </ThemeContextProvider>
+      </body>
     </html>
   );
 }
