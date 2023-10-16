@@ -36,10 +36,14 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^1.1.2",
+    "@wagmi/core": "^1.4.3",
     "lodash": "^4.17.21",
     "next": "^13.5.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "viem": "^1.16.6",
+    "wagmi": "^1.4.3"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
