@@ -7,7 +7,7 @@ import { arbitrum, goerli, mainnet, optimism, polygon } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { bsc, celo } from 'viem/chains';
 import { ReactNode } from 'react';
-import useThemeContext from './ThemeContext';
+import { useThemeContext } from './ThemeContext';
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [

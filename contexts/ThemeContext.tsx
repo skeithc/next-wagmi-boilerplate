@@ -11,7 +11,7 @@ export const ThemeContext = createContext({
   setThemeOverride: (() => {}) as (theme: ThemeType) => void,
 });
 
-export function ThemeContextProvider({ children }: { children: ReactNode }) {
+export default function ThemeContextProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<ThemeType>('dark');
   const [themeOverride, setThemeOverride] = useSessionStorageState<ThemeType>('theme', {
     defaultValue: undefined,
@@ -40,6 +40,6 @@ export function ThemeContextProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export default function useThemeContext() {
+export function useThemeContext() {
   return useContext(ThemeContext);
 }
