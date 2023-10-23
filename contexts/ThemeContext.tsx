@@ -31,11 +31,14 @@ export default function ThemeContextProvider({ children }: { children: ReactNode
     [theme, themeOverride, setThemeOverride]
   );
 
+  useEffect(() => {
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(value.theme);
+  }, [value]);
+
   return (
     <ThemeContext.Provider value={value}>
-      <div id="theme-wrapper" className={classNames('transition-all', value.theme)}>
-        {children}
-      </div>
+      {children}
     </ThemeContext.Provider>
   );
 }
